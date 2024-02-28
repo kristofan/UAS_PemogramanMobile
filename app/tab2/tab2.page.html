@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar color="tertiary" >
+    <ion-title color="light " class="ion-text-center">Data Obat Apotek</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="secondary">
+  <ion-card class="welcome-card bg-content">
+    <ion-card-header color="dark">
+      <ion-card-title color="secondary">Pendataan Obat</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Silakan isikan data obat yang akan di input!</p>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating" color="tertiary"> Nama Obat </ion-label>
+          <ion-input type="text" [(ngModel)]="nama"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" color="tertiary"> Jumlah Obat</ion-label>
+          <ion-input type="text" [(ngModel)]="nohp"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" color="primary">Harga per-satuan (IDR)</ion-label>
+          <ion-input type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" color="tertiary"> Jenis Obat </ion-label>
+          <ion-select
+            [(ngModel)]="prodi"
+            class="popover-content"
+            placeholder="Pilih jenis obat"
+          >
+            <ion-select-option value="Botol Sirup"
+              >Botol Sirup</ion-select-option
+            >
+            <ion-select-option value="Tablet"
+              >Tablet</ion-select-option
+            >
+            <ion-select-option value="Pil"
+              >Pil</ion-select-option
+            >
+          
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" color="tertiary"> Usia Pengguna</ion-label>
+          <ion-select
+            [(ngModel)]="usia"
+            class="popover-content"
+            placeholder="Pilih usia pengguna"
+          >
+            <ion-select-option value="Balita(0-2 tahun)"
+              >Balita(0-2 tahun)</ion-select-option
+            >
+            <ion-select-option value="Anak-anak(3-10 tahun)"
+              >Anak-anak(3-10 tahun)</ion-select-option
+            >
+            <ion-select-option value="Remaja(11-16 tahun)"
+              >Remaja(11-16 tahun)</ion-select-option
+            >
+            <ion-select-option value="Dewasa(17 keatas)"
+              >Dewasa(17 keatas)</ion-select-option
+            >
+          
+          </ion-select>
+        </ion-item>
+
+        
+
+        <ion-item>
+          <ion-label position="floating" color="tertiary"> Tahun Expired Obat </ion-label>
+          <ion-select [(ngModel)]="tahunlulus" placeholder="Pilih tahun expired">
+            <ion-select-option value="2028">2028</ion-select-option>
+            <ion-select-option value="2027">2027</ion-select-option>
+            <ion-select-option value="2026">2026</ion-select-option>
+            <ion-select-option value="2025">2025</ion-select-option>
+            <ion-select-option value="2024">2024</ion-select-option>
+            <ion-select-option value="2023">2023</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary"> Berat bersih </ion-label>
+        <ion-input type="text"  [(ngModel)]="beratbersih" placeholder="berat dalam bentuk mili gram(mg)"></ion-input>
+      </ion-item>
+
+      
+
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating" color="tertiary">Tanggal Masuk</ion-label>
+          <ion-datetime [(ngModel)]="tanggalproduksi" display-format="DD/MM/YYYY" picker-format="DD MMM YYYY" min="2020-01-01" max="2030-12-31"></ion-datetime>
+        </ion-item>
+      </ion-list>
+      
+      
+
+      
+
+      <div padding>
+        <ion-button
+          expand="block"
+          color="secondary"
+          size="medium"
+          (click)="addRegister()"
+        >
+        <ion-icon name="medkit"> </ion-icon> Input Data Obat
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

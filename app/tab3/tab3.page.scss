@@ -1,0 +1,75 @@
+
+  
+  ion-title {
+    font-size: 1.5em; /* Ukuran font judul */
+    font-weight: bold; /* Ketebalan font judul */
+  }
+  
+  
+  
+ 
+  
+  /* Animasi sedikit perubahan warna pada tombol saat hover */
+  
+  
+
+
+
+
+/* CSS untuk desain ion-card */
+ion-card {
+    --ion-background-color: #ffffff; /* Warna latar belakang kartu */
+    --ion-border-radius: 15px; /* Sudut bulat kartu */
+    --ion-box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1); /* Efek bayangan kartu */
+    overflow: hidden; /* Hindari border-radius yang berdampak pada efek bayangan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  ion-card-header {
+    --ion-background-color: #3498db; /* Warna latar belakang header kartu */
+    color: #ffffff; /* Warna teks header kartu */
+    border-radius: 15px 15px 0 0; /* Sudut bulat header bagian atas */
+    padding: 16px; /* Ruang padding pada header */
+  }
+  
+  ion-card-subtitle {
+    color: #9f9a9a; /* Warna teks subjudul */
+  }
+  
+  ion-card-content {
+    color: #edfbff; /* Warna teks konten kartu */
+    padding: 16px; /* Ruang padding pada konten */
+  }
+  
+  /* Efek transisi hover untuk memberikan sentuhan interaktif */
+  ion-card:hover {
+    transform: scale(1.015);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+
+
+
+
+  /* CSS untuk desain ion-card-title */
+ion-card-title {
+    font-size: 1.5em; /* Ukuran font judul kartu */
+    font-weight: bold; /* Ketebalan font judul kartu */
+    color: #b6aaaa; /* Warna teks judul kartu */
+    margin-bottom: 0.5px; /* Ruang margin di bawah judul kartu */
+    letter-spacing: 0.5px; /* Jarak antar huruf */
+  }
+  
+  ion-card-title::after {
+    content: '';
+    display: block;
+    height: 3px; /* Tinggi garis pemisah */
+    width: 300px; /* Panjang garis pemisah */
+    background-color: #34db58; /* Warna garis pemisah */
+    margin-top: 8px; /* Ruang di atas garis pemisah */
+  }
+  
+
+
+
+ 

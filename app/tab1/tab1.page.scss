@@ -1,0 +1,44 @@
+ion-content {
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ion-card {
+  
+    margin: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 17, 255, 0.2);
+  }
+  
+  ion-card-header {
+    background-color: #001867;
+  }
+  
+  ion-card-title {
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  ion-card-content {
+    padding: 10px;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  ion-title {
+    font-size: 1.5em; /* Ukuran font judul */
+    font-weight: bold; /* Ketebalan font judul */
+  }
+  
+  
+  

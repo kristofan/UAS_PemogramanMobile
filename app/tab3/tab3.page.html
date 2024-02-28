@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title color="light" class="ion-text-center"><ion-icon name="folder"></ion-icon> Data Obat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content color="light">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let alumni of alumnis" color="tertiary">
+    <ion-card-header color="primary">
+      <ion-card-subtitle>
+        Jenis Obat: {{alumni.prodi}},    Tahun expired: {{alumni.tahunlulus}},   <br>Usia Pengguna: {{alumni.usia}} <br>Tanggal masuk : {{alumni.tanggalproduksi}}
+      </ion-card-subtitle>
+
+      <ion-card-title>{{alumni.nama}}
+                      
+      </ion-card-title>
+      
+    </ion-card-header>
+    
+
+    <ion-card-content>
+      Jenis Obat: {{alumni.prodi}}<br>
+      Berat bersih : {{alumni.beratbersih}} mg
+      <br>Jumlah Stok Obat : {{alumni.nohp}}
+      <BR> Harga Obat : Rp.{{alumni.email}} 
+        
+
+    </ion-card-content>
+    
+    
+  </ion-card>
+
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data..."
+    >
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+
